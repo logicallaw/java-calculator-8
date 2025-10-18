@@ -23,10 +23,10 @@ MVC 패턴, Factory Method 패턴, 전략 패턴을 적용하여 객체지향적
     - [x] 커스텀 구분자 식별 상수 정의 ("//")
     - [x] 빈 문자열일 때 반환할 상수 정의 (0)
     - [x] 추상 메서드 execute() 정의
-- [ ] StringCalculator (BaseCalculator의 자식 클래스)
+- [x] StringCalculator (BaseCalculator의 자식 클래스)
     - [x] 잘못된 문자열 입력 시 "IllegalArgumentException" 발생
     - [x] 빈 문자열, 기본 구분자, 커스텀 구분자 여부를 판단하는 불리언 함수
-    - [ ] execute() 오버라이딩
+    - [x] execute() 오버라이딩
 - [ ] Factory
     - [ ] StringCalculator 객체 생성 함수 정의 (create())
 - [ ] CalculatorController (계산기의 실행 흐름 제어)
