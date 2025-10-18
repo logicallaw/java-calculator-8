@@ -9,12 +9,12 @@ MVC 패턴, Factory Method 패턴, 전략 패턴을 적용하여 객체지향적
 - [x] InputView: 사용자 입력 처리
 - [x] OutputView: 화면(console) 출력 처리
 - [ ] StringAddStrategy
-    - [ ] 기본 구분자 정규표현식 정의 (",|:")
-    - [ ] 커스텀 구분자 인덱스 정의 (2)
-    - [ ] 커스텀 구분자 접두어 제거용 substring 시작 인덱스 정의 (5)
-    - [ ] 입력 유효성 검사
-        - [ ] 음수 입력 시 "IllegalArgumentException" 발생
-        - [ ] 커스텀 구분자가 숫자일 경우 "IllegalArgumentException" 발생
+    - [x] 기본 구분자 정규표현식 정의 (",|:")
+    - [x] 커스텀 구분자 인덱스 정의 (2)
+    - [x] 커스텀 구분자 접두어 제거용 substring 시작 인덱스 정의 (5)
+    - [x] 입력 유효성 검사
+        - [x] 음수 입력 시 "IllegalArgumentException" 발생
+        - [x] 커스텀 구분자가 숫자일 경우 "IllegalArgumentException" 발생
     - [ ] 문자열 배열을 순회하며 양수 합 계산
     - [ ] 입력 문자열을 구분자로 split하여 문자열 배열 반환
     - [ ] **기본 구분자로 구성된 입력 문자열의 덧셈 결과 반환**
