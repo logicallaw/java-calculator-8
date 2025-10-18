@@ -13,11 +13,11 @@ public class StringCalculator extends BaseCalculator {
     }
 
     private static boolean isDefaultDelimiter(String userInput) {
-        return !userInput.contains(CUSTOM_DELIMITER);
+        return !userInput.contains(CUSTOM_DELIMITER_FIRST);
     }
 
     private static boolean isCustomDelimiter(String userInput) {
-        return userInput.contains(CUSTOM_DELIMITER);
+        return userInput.contains(CUSTOM_DELIMITER_FIRST) && userInput.contains(CUSTOM_DELIMITER_SECOND);
     }
 
     /**

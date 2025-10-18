@@ -51,11 +51,19 @@ class ApplicationTest extends NsTest {
     @Test
     void 커스텀_구분자자_숫자면_예외가_발생한다() {
         assertSimpleTest(() ->
-                assertThatThrownBy(() -> runException("//9\n29893"))
+                assertThatThrownBy(() -> runException("//9\\n29893"))
                         .isInstanceOf(IllegalArgumentException.class)
         );
     }
-    
+
+    @Test
+    void 커스텀_구분자가_잘못된_형식이면_예외가_발생한다() {
+        assertSimpleTest(() ->
+                assertThatThrownBy(() -> runException("//:2:3:4:5"))
+                        .isInstanceOf(IllegalArgumentException.class)
+        );
+    }
+
     @Override
     public void runMain() {
         Application.main(new String[]{});

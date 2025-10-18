@@ -26,12 +26,14 @@ public class StringAddStrategy {
         int result = 0;
 
         for (String number : numbers) {
+            if (number.isEmpty()) continue;
+
             int integerNumber = Integer.parseInt(number);
 
             // 문제의 기능 요구 사항에 따라서 음수는 잘못된 값임
             if (integerNumber < 0) throw new IllegalArgumentException(NEGATIVE_ERROR);
 
-            result += Integer.parseInt(number);
+            result += integerNumber;
         }
 
         return result;

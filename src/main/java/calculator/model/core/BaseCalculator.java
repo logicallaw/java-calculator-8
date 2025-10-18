@@ -6,7 +6,8 @@ import calculator.model.strategy.StringAddStrategy;
  * 계산기의 기본 동작을 정의하는 추상 클래스
  */
 abstract class BaseCalculator {
-    protected static final String CUSTOM_DELIMITER = "//";
+    protected static final String CUSTOM_DELIMITER_FIRST = "//";
+    protected static final String CUSTOM_DELIMITER_SECOND = "\\n";
     protected static final int INITIAL_SUM = 0;
 
     protected StringAddStrategy stringAddStrategy;

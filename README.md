@@ -34,6 +34,7 @@ MVC 패턴, Factory Method 패턴, 전략 패턴을 적용하여 객체지향적
     - [x] 객체 생성 및 CalculatorController 실행
 - [x] ApplicationTest
     - [x] 올바른 기본 구분자는 통과 ("3,5:9,")
-    - [x] 기본 구분자가 아닌 구분자가 포함된 경우는 에러 발생 ("1,2;3[4,5")
-    - [x] 구분자만 있는 경우 에러 발생 (",,;[]")
-    - [x] 커스텀 구분자가 숫자이면 구분 기준이 모호해지므로 에러 발생 ("//9\n29893")
+    - [x] 기본 구분자가 아닌 구분자가 포함된 경우는 "IllegalArgumentException" 발생 ("1,2;3[4,5")
+    - [x] 구분자만 있는 경우 "IllegalArgumentException" 발생 (",,;[]")
+    - [x] 커스텀 구분자가 숫자이면 구분 기준이 모호해지므로 "IllegalArgumentException" 발생 ("//9\n29893")
+    - [x] 커스텀 구분자가 잘못된 형식이면 "IllegalArgumentException" 발생 ("//:2:3:4:5")
