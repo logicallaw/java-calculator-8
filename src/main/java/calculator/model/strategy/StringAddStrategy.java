@@ -28,7 +28,7 @@ public class StringAddStrategy {
 
         return result;
     }
-    
+
     /**
      * 입력 문자열을 구분자로 나누어 문자열 배열을 반환한다.
      *
@@ -38,5 +38,17 @@ public class StringAddStrategy {
      */
     private String[] splitStrings(final String inputString, final String delimiter) {
         return inputString.split(delimiter);
+    }
+
+    /**
+     * 기본 구분자를 포함하는 입력 문자열을 덧셈한 결과를 반환한다.
+     *
+     * @param userInput 기본 구분자를 포함하는 입력 문자열
+     * @return 해당 문자열의 덧셈 결과
+     */
+    public int executeDefaultAddition(final String userInput) {
+        String[] numbers = userInput.split(DEFAULT_DELIMITER_PATTERN);
+
+        return addStringNumbers(numbers);
     }
 }
