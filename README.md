@@ -30,8 +30,8 @@ MVC 패턴, Factory Method 패턴, 전략 패턴을 적용하여 객체지향적
 - [x] Factory
     - [x] StringCalculator 객체 생성 함수 정의 (create())
 - [x] CalculatorController (계산기의 실행 흐름 제어)
-- [ ] Application
-    - [ ] 객체 생성 및 CalculatorController 실행
+- [x] Application
+    - [x] 객체 생성 및 CalculatorController 실행
 - [ ] ApplicationTest
     - [ ] 올바른 기본 구분자는 통과 ("3,5:9,")
     - [ ] 기본 구분자가 아닌 구분자가 포함된 경우는 에러 발생 ("1,2;3[4,5")
