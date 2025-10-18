@@ -1,5 +1,13 @@
 package calculator.model.strategy;
 
+/**
+ * 구분자와 양수가 포함된 문자열을 덧셈 가능한 숫자로 변환하고 합계를 계산하는 전략 클래스이다.
+ * <p>
+ * 기본 구분자(',', ':') 또는 커스텀 구분자(e.g, "//;\n")를 포함한 문자열 입력을 파싱하여
+ * 각 숫자의 합을 반환한다.
+ * <p>
+ * 음수가 포함된 입력은 {@link IllegalArgumentException}을 발생시킨다.
+ */
 public class StringAddStrategy {
     private static final String DEFAULT_DELIMITER_PATTERN = ",|:";
     private static final int CUSTOM_DELIMITER_INDEX = 2;
@@ -48,6 +56,31 @@ public class StringAddStrategy {
      */
     public int executeDefaultAddition(final String userInput) {
         String[] numbers = userInput.split(DEFAULT_DELIMITER_PATTERN);
+
+        return addStringNumbers(numbers);
+    }
+
+    /**
+     * 커스텀 구분자를 포함하는 입력 문자열을 덧셈한 결과를 반환한다.
+     *
+     * @param userInput 커스텀 구분자를 포함하는 입력 문자열
+     * @return 해당 문자열의 덧셈 결과
+     */
+    public int executeCustomAddition(final String userInput) {
+        // 커스텀 구분자의 문자를 저장
+        char customDelimiterChar = userInput.charAt(CUSTOM_DELIMITER_INDEX);
+
+        if (Character.isDigit(customDelimiterChar)) {
+            throw new IllegalArgumentException(NUMERIC_DELIMITER_ERROR);
+        }
+
+        // splitStrings 함수의 입력을 위해, char에서 String으로 형변환
+        String customDelimiterString = String.valueOf(customDelimiterChar);
+
+        // 커스텀 구분자 접두어를 제거하여 전처리된 문자열을 저장
+        String cleanedUserInput = userInput.substring(CLEANED_STRING_START_INDEX);
+
+        String[] numbers = splitStrings(cleanedUserInput, customDelimiterString);
 
         return addStringNumbers(numbers);
     }
