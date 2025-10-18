@@ -28,4 +28,15 @@ public class StringAddStrategy {
 
         return result;
     }
+    
+    /**
+     * 입력 문자열을 구분자로 나누어 문자열 배열을 반환한다.
+     *
+     * @param inputString 입력 문자열
+     * @param delimiter   구분자
+     * @return 문자열 배열
+     */
+    private String[] splitStrings(final String inputString, final String delimiter) {
+        return inputString.split(delimiter);
+    }
 }
