@@ -7,7 +7,7 @@
 MVC 패턴, Factory Method 패턴, 전략 패턴을 적용하여 객체지향적 설계를 목표로 한다.
 
 - [x] InputView: 사용자 입력 처리
-- [ ] OutputView: 화면(console) 출력 처리
+- [x] OutputView: 화면(console) 출력 처리
 - [ ] StringAddStrategy
     - [ ] 기본 구분자 정규표현식 정의 (",|:")
     - [ ] 커스텀 구분자 인덱스 정의 (2)
