@@ -29,7 +29,7 @@ MVC 패턴, Factory Method 패턴, 전략 패턴을 적용하여 객체지향적
     - [x] execute() 오버라이딩
 - [x] Factory
     - [x] StringCalculator 객체 생성 함수 정의 (create())
-- [ ] CalculatorController (계산기의 실행 흐름 제어)
+- [x] CalculatorController (계산기의 실행 흐름 제어)
 - [ ] Application
     - [ ] 객체 생성 및 CalculatorController 실행
 - [ ] ApplicationTest
