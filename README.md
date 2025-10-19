@@ -38,3 +38,7 @@ MVC 패턴, Factory Method 패턴, 전략 패턴을 적용하여 객체지향적
     - [x] 구분자만 있는 경우 "IllegalArgumentException" 발생 (",,;[]")
     - [x] 커스텀 구분자가 숫자이면 구분 기준이 모호해지므로 "IllegalArgumentException" 발생 ("//9\n29893")
     - [x] 커스텀 구분자가 잘못된 형식이면 "IllegalArgumentException" 발생 ("//:2:3:4:5")
+- [x] 전략패턴 수정
+    - [x] 계산기의 동작을 확장 가능하도록 기능을 정의하는 Calculation 인터페이스를 생성
+    - [x] 이를 상속 받아서 문자열 덧셈 기능을 수행하는 자식 클래스 StringCalculation 생성
+    - [x] BaseCalculator에 setCalculation 함수를 정의하여 내부 구현은 숨기되 사용하기 용이하도록 API 정의

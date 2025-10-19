@@ -1,6 +1,6 @@
 package calculator.model.core;
 
-import calculator.model.strategy.StringAddStrategy;
+import calculator.model.strategy.Calculation;
 
 /**
  * 계산기의 기본 동작을 정의하는 추상 클래스
@@ -10,7 +10,7 @@ abstract class BaseCalculator {
     protected static final String CUSTOM_DELIMITER_SECOND = "\\n";
     protected static final int INITIAL_SUM = 0;
 
-    protected StringAddStrategy stringAddStrategy;
+    protected Calculation calculation;
 
     /**
      * 문자열 덧셈 결과를 반환한다.
@@ -19,4 +19,13 @@ abstract class BaseCalculator {
      * @return 문자열에 대한 덧셈 결과
      */
     public abstract int execute(final String userInput);
+
+    /**
+     * 계산기의 기능 객체를 받아서 계산기 동작을 설정한다.
+     *
+     * @param calculation 계산기 기능 객체
+     */
+    public void setCalculation(Calculation calculation) {
+        this.calculation = calculation;
+    }
 }

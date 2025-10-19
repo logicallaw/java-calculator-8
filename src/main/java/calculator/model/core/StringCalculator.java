@@ -1,6 +1,6 @@
 package calculator.model.core;
 
-import calculator.model.strategy.StringAddStrategy;
+import calculator.model.strategy.StringCalculation;
 
 /**
  * 문자열 입력을 분석하여 적절한 덧셈 전략을 선택하고 계산하는 클래스이다.
@@ -24,7 +24,7 @@ public class StringCalculator extends BaseCalculator {
      * 기본 생성자를 정의한다.
      */
     public StringCalculator() {
-        this.stringAddStrategy = new StringAddStrategy();
+        this.setCalculation(new StringCalculation());
     }
 
     /**
@@ -41,11 +41,11 @@ public class StringCalculator extends BaseCalculator {
         }
 
         if (isDefaultDelimiter(userInput)) {
-            return this.stringAddStrategy.executeDefaultAddition(userInput);
+            return this.calculation.executeDefaultAddition(userInput);
         }
 
         if (isCustomDelimiter(userInput)) {
-            return this.stringAddStrategy.executeCustomAddition(userInput);
+            return this.calculation.executeCustomAddition(userInput);
         }
 
         throw new IllegalArgumentException(ILLEGAL_ARGUMENT_MESSAGE + userInput);

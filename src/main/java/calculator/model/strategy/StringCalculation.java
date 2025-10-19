@@ -8,7 +8,7 @@ package calculator.model.strategy;
  * <p>
  * 음수가 포함된 입력은 {@link IllegalArgumentException}을 발생시킨다.
  */
-public class StringAddStrategy {
+public class StringCalculation implements Calculation {
     private static final String DEFAULT_DELIMITER_PATTERN = ",|:";
     private static final int CUSTOM_DELIMITER_INDEX = 2;
     private static final int CLEANED_STRING_START_INDEX = 5;
@@ -56,6 +56,7 @@ public class StringAddStrategy {
      * @param userInput 기본 구분자를 포함하는 입력 문자열
      * @return 해당 문자열의 덧셈 결과
      */
+    @Override
     public int executeDefaultAddition(final String userInput) {
         String[] numbers = userInput.split(DEFAULT_DELIMITER_PATTERN);
 
@@ -68,6 +69,7 @@ public class StringAddStrategy {
      * @param userInput 커스텀 구분자를 포함하는 입력 문자열
      * @return 해당 문자열의 덧셈 결과
      */
+    @Override
     public int executeCustomAddition(final String userInput) {
         // 커스텀 구분자의 문자를 저장
         char customDelimiterChar = userInput.charAt(CUSTOM_DELIMITER_INDEX);
